@@ -1,9 +1,33 @@
 
+# Option 1:
+# Difficulty Level: 
+# Elementary: In this exercise you will create a program that displays a multiplication table that shows the products of all combinations of integers from 1 times 1 up to and including 10 times 10. Your multiplication table should include a row of labels across the top of it containing the numbers 1 through 10. It should also include labels down  the left side consisting of the numbers 1 through 10. 
+
+# Multiplication table (from 1 to 10) in Python (To run this cell press Ctrl+Enter)
+b, c, count = '   ', '   ', 0
+for i in range(1, 11):
+    if i > 9:
+        b += str(i) + '  '
+        c += str(i) + ' '
+    else:
+        b += str(i) + '   '
+        c += str(i) + '   '
+    for a in range(1, 11):
+        d = str(a*i)
+        for letter in d:
+            count += 1
+        c += str(a*i) + ' '*(4-count)
+        count = 0
+    c += '\n   '
+print((' ')*4 + b)
+print(c)
+
+# End Option 1 ***
+
 
 #Option 2: 
 #Difficulty Level: Pre-Intermediate:  
-#The greatest common divisor of two positive integers, n and m, is the largest number,
-#d, which divides evenly into both n and m. There are several algorithms that can be used 
+#The greatest common divisor of two positive integers, n and m, is the largest number, d, which divides evenly into both n and m. There are several algorithms that can be used 
 #to solve this problem, including: Initialize d to the smaller of m and n.
 
 # Python code to demonstrate gcd() 
@@ -15,3 +39,5 @@ m = int(input("Number two: "))
 
 print (f"The gcd of {n} and {m} is: ",end="") 
 print (math.gcd(n,m)) 
+
+# End Option 2 ***
